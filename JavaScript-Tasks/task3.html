@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Tasks</title>
+</head>
+<body>
+    <h2>JavaScript Company Style Tasks</h2>
+
+    <script>
+        let basicSalary = 25000;
+        let hra = basicSalary * 0.20;
+        let bonus = basicSalary * 0.10;
+        let totalSalary = basicSalary + hra + bonus;
+        let tax = totalSalary * 0.05;
+        let finalSalary = totalSalary - tax;
+
+        console.log("Task 1");
+        console.log("Basic Salary:", basicSalary);
+        console.log("HRA:", hra);
+        console.log("Bonus:", bonus);
+        console.log("Tax:", tax);
+        console.log("Final Salary:", finalSalary);
+
+        let marks = 85;
+
+        console.log("Task 2");
+        if (marks >= 90) {
+            console.log("Grade: A+");
+        } else if (marks >= 80) {
+            console.log("Grade: A");
+        } else if (marks >= 70) {
+            console.log("Grade: B");
+        } else if (marks >= 60) {
+            console.log("Grade: C");
+        } else {
+            console.log("Fail");
+        }
+
+        let username = "admin";
+        let password = "12345";
+
+        console.log("Task 3");
+        if (username === "admin") {
+            if (password === "12345") {
+                console.log("Login Success");
+            } else {
+                console.log("Invalid Password");
+            }
+        } else {
+            console.log("Invalid Username");
+        }
+
+        let balance = 5000;
+        let withdraw = 2000;
+
+        console.log("Task 4");
+        if (withdraw > balance) {
+            console.log("Insufficient Balance");
+        } else {
+            balance -= withdraw;
+            console.log("Withdrawal Success");
+            console.log("Remaining Balance:", balance);
+        }
+
+        let purchase = 7000;
+        let discount = 0;
+
+        console.log("Task 5");
+        if (purchase >= 10000) {
+            discount = purchase * 0.20;
+        } else if (purchase >= 5000) {
+            discount = purchase * 0.10;
+        } else if (purchase >= 2000) {
+            discount = purchase * 0.05;
+        }
+
+        let finalAmount = purchase - discount;
+
+        console.log("Original Amount:", purchase);
+        console.log("Discount:", discount);
+        console.log("Final Amount:", finalAmount);
+
+        let helmet = "No";
+        let license = "No";
+
+        console.log("Task 6");
+        if (helmet === "No" && license === "No") {
+            console.log("Fine: ₹3000");
+        } else if (helmet === "No") {
+            console.log("Fine: ₹1000");
+        } else if (license === "No") {
+            console.log("Fine: ₹2000");
+        } else {
+            console.log("No Fine");
+        }
+
+        let attendance = ["P","P","A","P","A","P","P"];
+        let present = 0;
+        let absent = 0;
+
+        console.log("Task 7");
+        for (let i = 0; i < attendance.length; i++) {
+            if (attendance[i] === "P") {
+                present++;
+            } else {
+                absent++;
+            }
+        }
+
+        console.log("Present Days:", present);
+        console.log("Absent Days:", absent);
+
+        let product = {
+            productName: "Laptop",
+            price: 50000,
+            stock: 10
+        };
+
+        console.log("Task 8");
+        for (let key in product) {
+            console.log(key + ":", product[key]);
+        }
+        let distance = 12;
+        let fare = 0;
+
+        console.log("Task 9");
+        if (distance <= 5) {
+            fare = distance * 20;
+        } else if (distance <= 10) {
+            fare = (5 * 20) + ((distance - 5) * 15);
+        } else {
+            fare = (5 * 20) + (5 * 15) + ((distance - 10) * 10);
+        }
+
+        console.log("Total Fare: ₹" + fare);
+
+  
+        let employees = [
+            {id:1, name:"Rahul", salary:25000},
+            {id:2, name:"Kiran", salary:30000},
+            {id:3, name:"Navi", salary:40000}
+        ];
+
+        let highest = employees[0];
+        let lowest = employees[0];
+        let totalEmpSalary = 0;
+
+        console.log("Task 10");
+        for (let i = 0; i < employees.length; i++) {
+            console.log(employees[i]);
+
+            if (employees[i].salary > highest.salary) {
+                highest = employees[i];
+            }
+
+            if (employees[i].salary < lowest.salary) {
+                lowest = employees[i];
+            }
+
+            totalEmpSalary += employees[i].salary;
+        }
+
+        console.log("Highest Salary Employee:", highest);
+        console.log("Lowest Salary Employee:", lowest);
+        console.log("Total Employees:", employees.length);
+        console.log("Total Salary Expenditure:", totalEmpSalary);
+
+    </script>
+</body>
+</html>
