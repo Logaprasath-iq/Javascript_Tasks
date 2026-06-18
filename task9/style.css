@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff6ec4,#7873f5,#42e695);
+    background-size:400% 400%;
+    animation:bgMove 10s ease infinite;
+    min-height:100vh;
+    padding:20px;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+}
+
+.controls{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+input,
+select,
+button{
+    padding:10px;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    background:#ff5722;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.box{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:contain;
+}
+
+.card h3{
+    font-size:16px;
+    margin:10px 0;
+}
+
+.card p{
+    margin:5px 0;
+}
+
+#loading{
+    text-align:center;
+    color:white;
+    margin:20px;
+}
+
+#cartItems{
+    display:none;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.cart-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.cart-card img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.total{
+    font-size:20px;
+    font-weight:bold;
+    margin-top:15px;
+    color:green;
+}

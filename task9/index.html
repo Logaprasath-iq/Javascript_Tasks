@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🛒 E-Commerce Product Dashboard</h1>
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search Product">
+
+        <select id="category">
+            <option value="all">All Categories</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="jewelery">Jewelry</option>
+        </select>
+
+        <h3>Cart: <span id="cartCount">0</span></h3>
+
+        <button id="viewCartBtn">View Cart</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="stats">
+        <div class="box">
+            <h3>Total Products</h3>
+            <p id="totalProducts"></p>
+        </div>
+
+        <div class="box">
+            <h3>Average Price</h3>
+            <p id="avgPrice"></p>
+        </div>
+
+        <div class="box">
+            <h3>Highest Price Product</h3>
+            <p id="highPrice"></p>
+        </div>
+
+        <div class="box">
+            <h3>Lowest Price Product</h3>
+            <p id="lowPrice"></p>
+        </div>
+    </div>
+
+    <h2 id="loading">Loading Products...</h2>
+
+    <div id="products" class="products"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
